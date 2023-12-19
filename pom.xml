@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.sytex</groupId>
-    <artifactId>ddd20231219</artifactId>
+    <artifactId>dddlab</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ddd20231219</name>
-    <description>ddd20231219</description>
+    <name>dddlab</name>
+    <description>ddd Lab 2023.12.19　微服務架構workshop</description>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -54,6 +54,22 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.axonframework</groupId>
+            <artifactId>axon-spring-boot-starter</artifactId>
+            <version>4.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.axonframework</groupId>
+            <artifactId>axon-test</artifactId>
+            <version>4.9.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.axoniq.console</groupId>
+            <artifactId>console-framework-client-spring-boot-starter</artifactId>
+            <version>1.2.0</version>
         </dependency>
     </dependencies>
 

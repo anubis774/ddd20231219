@@ -1,4 +1,4 @@
-package com.sytex.ddd20231219;
+package com.systex.dddlab;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
