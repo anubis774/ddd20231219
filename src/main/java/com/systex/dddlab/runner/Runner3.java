@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
-@Component
+//@Component
 @Slf4j
 @Order(3)
 public class Runner3 implements CommandLineRunner {

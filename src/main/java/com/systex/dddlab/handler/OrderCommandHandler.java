@@ -10,7 +10,11 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class OrderCommandHandler {
     @CommandHandler
-    public void on(PlaceOrderCommand command) {
+    public void handle(PlaceOrderCommand command) {
         log.info("接收到place order command={}", command);
     }
+//    @CommandHandler
+//    public void handleMore(PlaceOrderCommand cmd) {
+//        log.info("另一個={}",cmd);
+//    }
 }

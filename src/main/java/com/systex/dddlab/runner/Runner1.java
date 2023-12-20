@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
-@Component
+//@Component
 @Slf4j
 @Order(1)
 public class Runner1 implements CommandLineRunner {
@@ -49,6 +49,7 @@ public class Runner1 implements CommandLineRunner {
                 log.info("exception訊息是:{}", result.exceptionResult().toString());
             }
         });
+
         log.info("傳送命令, 準備取得結果");
 
     }

@@ -19,8 +19,10 @@ public class Runner4 implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        String s1 = UUID.randomUUID().toString();
+        log.info("uuid={}",s1);
         CreateUserAccountCommand command1 =
-                new CreateUserAccountCommand(UUID.randomUUID().toString(), "Mark");
+                new CreateUserAccountCommand(s1, "Mark");
         commandGateway.send(command1,(m,r)->{
             if (!r.isExceptional()) {
                 log.info("創建物件成功");

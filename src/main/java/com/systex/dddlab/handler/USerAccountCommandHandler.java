@@ -20,8 +20,13 @@ public class USerAccountCommandHandler {
     public void handle(CreateUserAccountCommand command) throws Exception {
         log.info("在command handler中");
         repository.newInstance(() -> {
-            log.info("創建一個aggregate");
+            log.info("新產生{}的實例", command.getUserAccountId());
             return new UserAccount(command.getUserAccountId(), command.getName());
         });
+        repository.load(command.getUserAccountId()).execute(userAccount -> {
+                    log.info("把物件{}取出自己呼叫callback產生event", userAccount.getAccountId());
+                    userAccount.afterCreateAccountCallback();
+                }
+        );
     }
 }
